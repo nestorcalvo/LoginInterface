@@ -24,12 +24,8 @@ class LoginActivity : AppCompatActivity() {
             password = intent.extras!!.getString("pwd").toString()
             flag = true
         }
-        if(intent.extras!!.getBoolean("Exit")){
-            finish()
-        }
-
         tvRegister.setOnClickListener {
-            var intent = Intent(this, RegistroActivity::class.java)
+            val intent = Intent(this, RegistroActivity::class.java)
             startActivityForResult(intent, 1234)
 
         }
@@ -38,10 +34,11 @@ class LoginActivity : AppCompatActivity() {
             userlogin = edUser.text.toString()
             pwdlogin = edPass.text.toString()
             if (userlogin == username && pwdlogin == password && (userlogin.isNotBlank() && pwdlogin.isNotBlank())) {
-                var intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 intent.putExtra("user", userlogin)
                 intent.putExtra("pwd", pwdlogin)
                 startActivity(intent)
+                finish()
             } else if (userlogin.isBlank() || pwdlogin.isBlank()) {
                 Toast.makeText(this, getString(R.string.Empty), Toast.LENGTH_LONG).show()
             } else if (userlogin != username) {
