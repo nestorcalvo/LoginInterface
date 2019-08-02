@@ -16,4 +16,5 @@
     <string name="tvPwdMain"/>
     <string name="close">Cerrar Sesión</string>
     <string name="IncompleteRegister">Registro fallido</string>
+    <string name="finapptitle">Finapp</string>
 </resources>
