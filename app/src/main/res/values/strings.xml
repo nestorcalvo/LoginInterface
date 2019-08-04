@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">LoginInterface</string>
     <string name="title">Login</string>
-    <string name="password">Contraseña:</string>
-    <string name="user">Usuario</string>
+    <string name="password">Contraseña :</string>
+    <string name="user">Usuario :</string>
     <string name="register">No tienes cuenta? Registrate.</string>
     <string name="login">Iniciar Sesión</string>
     <string name="guardar">Registrarse</string>
     <string name="registro">Registro</string>
-    <string name="confirm">Confirmar Contraseña</string>
-    <string name="WrongRegisterPass">Registrate bien idiota</string>
+    <string name="confirm">Confirmar Contraseña : </string>
+    <string name="WrongRegisterPass">Las contraseñas deben ser iguales</string>
     <string name="Empty">Usuario o contraseña vacios</string>
     <string name="WrongUser">Usuario incorrecto</string>
     <string name="WrongPwd">Contraseña incorrecta</string>
@@ -17,4 +17,5 @@
     <string name="close">Cerrar Sesión</string>
     <string name="IncompleteRegister">Registro fallido</string>
     <string name="finapptitle">Finapp</string>
+    <string name="shortPassword">La contraseña debe ser mayor a 6 caracteres</string>
 </resources>

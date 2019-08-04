@@ -20,11 +20,17 @@ class RegistroActivity : AppCompatActivity() {
             }
 
             else if(edPass.text.toString() == edRepPass.text.toString()){
+                if (edPass.text.toString().length < 6 || edRepPass.text.toString().length < 6){
+
+                    Toast.makeText(this,getString(R.string.shortPassword),Toast.LENGTH_LONG).show()
+
+                }
+                else{
                 var intent = Intent()
                 intent.putExtra("username", edUser.text.toString())
                 intent.putExtra("pwd", edPass.text.toString())
                 setResult(Activity.RESULT_OK,intent)
-                finish()
+                finish()}
             }
             else{
                 Toast.makeText(this,getString(R.string.WrongRegisterPass),Toast.LENGTH_LONG).show()

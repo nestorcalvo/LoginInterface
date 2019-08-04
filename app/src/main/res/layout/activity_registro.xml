@@ -6,72 +6,130 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".RegistroActivity"
-        android:padding="20dp">
+        android:padding="20dp" android:background="@drawable/main_menu">
 
+    <ImageView
+            android:id="@+id/bgappiconlogin"
+            android:scaleType="centerCrop"
+            android:layout_width="116dp"
+            android:layout_height="170dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintVertical_bias="0.028" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"/>
     <TextView
             android:text="@string/registro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvRegistro" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.08" android:textSize="30sp" android:textStyle="normal"
-            android:textColor="@color/black" android:fontFamily="sans-serif-black"/>
-    <TextView
-            android:text="@string/user"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tvUserRegister"
-            app:layout_constraintTop_toBottomOf="@+id/tvRegistro" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginTop="48dp" app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.023"/>
+            android:layout_width="180dp"
+            android:layout_height="96dp"
+            android:id="@+id/tvRegistro" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.497" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:textSize="52sp" android:textColor="@color/white" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.329"
+            android:fontFamily="@font/scriptmtbold" android:textAlignment="center" android:shadowDx="5"
+            android:shadowDy="10" android:shadowColor="#000000" android:shadowRadius="20"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
     <TextView
             android:text="@string/password"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="42dp"
             android:id="@+id/tvPassRegister"
-            app:layout_constraintTop_toBottomOf="@+id/tvUserRegister" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" android:layout_marginTop="68dp"
-            android:layout_marginEnd="8dp" app:layout_constraintHorizontal_bias="0.177"
-            app:layout_constraintEnd_toStartOf="@+id/edRepPass"/>
+
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="gravity" android:shadowColor="@color/black" android:textColor="@color/white"
+            android:shadowDx="5" android:shadowDy="10" android:shadowRadius="20" android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="@+id/tvUserRegister"
+            app:layout_constraintVertical_bias="0.62"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+    />
+    <TextView
+            android:text="@string/confirm"
+            android:layout_width="154dp"
+            android:layout_height="60dp"
+            android:id="@+id/tvPassRegisterConfirm"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintStart_toStartOf="@+id/tvPassRegister"
+            android:textAlignment="gravity" android:shadowColor="@color/black" android:textColor="@color/white"
+            android:shadowDx="5" android:shadowDy="10" android:shadowRadius="20" android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.72"
+            android:layout_marginBottom="8dp"
+    />
+    <TextView
+            android:text="@string/user"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/tvUserRegister"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="gravity" android:shadowColor="@color/black" android:textColor="@color/white"
+            android:shadowDx="5" android:shadowDy="10" android:shadowRadius="20" android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.51" app:layout_constraintEnd_toEndOf="parent"/>
+
     <Button
             android:text="@string/guardar"
-            android:layout_width="115dp"
-            android:layout_height="51dp"
-            android:id="@+id/bnRegister" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/edRepPass"
-            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.176"/>
+            android:layout_width="143dp"
+            android:layout_height="46dp"
+            android:id="@+id/bnRegister" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/edRepPass" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.449"
+            android:fontFamily="sans-serif-condensed" android:textSize="18sp"
+            android:background="@drawable/button_shadow" android:textAlignment="center"
+            android:shadowColor="#57000000" android:shadowDx="5" android:shadowDy="10" android:shadowRadius="20"
+            app:layout_constraintHorizontal_bias="0.551"/>
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/edPass" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/edUser"
-            app:layout_constraintStart_toEndOf="@+id/tvPassRegister" android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="@+id/edUser"
-            app:layout_constraintHorizontal_bias="0.18" app:layout_constraintStart_toStartOf="@+id/edUser"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
+            android:layout_width="187dp"
+            android:layout_height="42dp"
+            android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/edUser"
-            app:layout_constraintStart_toEndOf="@+id/tvUserRegister" android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/tvRegistro"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-    />
+            app:layout_constraintEnd_toEndOf="@+id/edRepPass"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/textview_shadow"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUserRegister" app:layout_constraintVertical_bias="1.0"
+            android:layout_marginEnd="8dp" app:layout_constraintTop_toTopOf="@+id/tvUserRegister"
+            app:layout_constraintStart_toStartOf="@+id/edRepPass" app:layout_constraintHorizontal_bias="0.0"
+            android:fontFamily="sans-serif-condensed-light"/>
     <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="187dp"
+            android:layout_height="42dp"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/edPass"
+            app:layout_constraintEnd_toEndOf="@+id/edUser"
+            android:background="@drawable/textview_shadow"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPassRegister"
+            app:layout_constraintVertical_bias="1.0" app:layout_constraintTop_toTopOf="@+id/tvPassRegister"
+            app:layout_constraintStart_toStartOf="@+id/edUser"
+            app:layout_constraintHorizontal_bias="0.923" android:fontFamily="sans-serif-condensed-light"/>
+    <EditText
+            android:layout_width="187dp"
+            android:layout_height="42dp"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/edRepPass"
-            app:layout_constraintStart_toEndOf="@+id/tvPassRegister" android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/edPass"
-            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="@+id/edPass"
-            app:layout_constraintStart_toStartOf="@+id/edPass"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/textview_shadow"
+            android:layout_marginTop="36dp" app:layout_constraintHorizontal_bias="0.117" android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/tvPassRegisterConfirm"
+            app:layout_constraintVertical_bias="1.0" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@+id/tvPassRegisterConfirm"
+            app:layout_constraintTop_toTopOf="@+id/tvPassRegisterConfirm"
+            android:fontFamily="sans-serif-condensed-light"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

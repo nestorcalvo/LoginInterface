@@ -6,6 +6,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import android.widget.TextView
+import android.view.animation.AnimationSet
+
+
 
 
 class SplashActivity : Activity() {
@@ -14,24 +18,36 @@ class SplashActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
+        var bgapp = findViewById<ImageView>(R.id.bgapp)
+
+        var bgappicon = findViewById<ImageView>(R.id.bgappicon)
+
+        var bgapptext = findViewById<TextView>(R.id.etTitle)
+
+        var bganim = AnimationUtils.loadAnimation(this,R.anim.bganim)
 
 
-        //var bgapp = findViewById<ImageView>(R.id.bgapp)
+        var bgpopout= AnimationUtils.loadAnimation(this,R.anim.textanimoutro)
 
-        //var bganim = AnimationUtils.loadAnimation(this,R.anim.bganim)
+        bgappicon.startAnimation(bgpopout)
+        bgapptext.startAnimation(bgpopout)
 
-        //bgapp.startAnimation(bganim)
+        bgappicon.animate().startDelay = 4000
+        bgapptext.animate().startDelay = 4000
 
-        //bgapp.animate().translationX((-15000).toFloat()).setDuration(1000).setStartDelay(1500)
+        bgapp.startAnimation(bganim)
+        bgapp.animate().startDelay = 2000
 
-
-       /* handler = Handler()
+        handler = Handler()
         handler.postDelayed({
             val intent = Intent(this@SplashActivity, LoginActivity::class.java)
             intent.putExtra("flag",true)
             startActivity(intent)
             finish()
-        }, 1500)*/
+        }, 1000)
+
+
+
 
     }
 }
