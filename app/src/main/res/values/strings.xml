@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LoginInterface</string>
+    <string name="app_name">FinaBuddy</string>
     <string name="title">Login</string>
     <string name="password">Contraseña :</string>
     <string name="user">Usuario :</string>
@@ -16,6 +16,6 @@
     <string name="tvPwdMain"/>
     <string name="close">Cerrar Sesión</string>
     <string name="IncompleteRegister">Registro fallido</string>
-    <string name="finapptitle">Finapp</string>
+    <string name="finapptitle">FinaBuddy</string>
     <string name="shortPassword">La contraseña debe ser mayor a 6 caracteres</string>
 </resources>

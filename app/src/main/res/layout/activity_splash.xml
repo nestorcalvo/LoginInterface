@@ -37,7 +37,7 @@
     <TextView android:layout_width="329dp"
               android:layout_height="194dp"
               android:text="@string/finapptitle"
-              android:textSize="100sp"
+              android:textSize="65sp"
               android:textColor="#FBF4E7"
               android:gravity="center"
               android:fontFamily="@font/scriptmtbold"
